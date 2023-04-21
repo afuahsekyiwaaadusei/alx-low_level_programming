@@ -23,7 +23,7 @@ int main(void)
 		else
 		{
 			putchar(ch);
-			ch++
+			ch++;
 		}
 	}
 
