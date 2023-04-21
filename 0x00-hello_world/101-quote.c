@@ -14,5 +14,5 @@ int main(void)
 
 	write(2, err, strnlen(err, sizeof(err)));
 
-	return (0);
+	return (1);
 }
