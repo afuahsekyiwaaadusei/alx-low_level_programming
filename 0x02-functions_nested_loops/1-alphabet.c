@@ -3,7 +3,7 @@
 /**
  *main -check the code
  *
- *return: always returns zero
+ *Return: Always  zero
  */
 
 int main(void)
@@ -12,7 +12,7 @@ int main(void)
 	{
 		char ch = 'a';
 
-		while (ch != 'z') 
+		while (ch != 'z')
 		{
 			_putchar(ch);
 			ch++;
@@ -20,4 +20,6 @@ int main(void)
 
 		_putchar('\n');
 	}
+
+	return (0);
 }
