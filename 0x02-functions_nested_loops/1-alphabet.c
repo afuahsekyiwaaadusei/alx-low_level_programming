@@ -8,18 +8,25 @@
 
 int main(void)
 {
-	void print_alphabet(void)
-	{
-		char ch = 'a';
-
-		while (ch != 'z')
-		{
-			_putchar(ch);
-			ch++;
-		}
-
-		_putchar('\n');
-	}
-
+	print_alphabet();
 	return (0);
 }
+
+/**
+ *print_alphabet - printa the alphabets in lowercase
+ *
+ *
+ */
+
+void print_alphabet(void)
+{
+	char ch = 'a';
+
+	while (ch != 'z')
+	{
+		_putchar(ch);
+		ch++;
+	}
+	_putchar('\n');
+}
+
