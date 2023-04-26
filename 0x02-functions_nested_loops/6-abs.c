@@ -9,12 +9,10 @@
 
 int _abs(int n)
 {
-	int tmp;
-
 	if (n < 0)
 	{
-		tmp = -n;
-		_putchar(tmp);
+		n = -n;
+		_putchar(n);
 	}
 	else
 		_putchar(n);
