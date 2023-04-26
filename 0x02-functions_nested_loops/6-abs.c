@@ -4,7 +4,7 @@
  *_abs - computes the absolute value of an integer
  *@n: integer to be computed
  *
- *Returns: zero if successful
+ *Return: zero if successful
  */
 
 int _abs(int n)
@@ -13,7 +13,7 @@ int _abs(int n)
 
 	if (n < 0)
 	{
-		tmp = -(n);
+		tmp = -n;
 		_putchar(tmp);
 	}
 	else
