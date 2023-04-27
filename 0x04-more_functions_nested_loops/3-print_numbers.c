@@ -2,7 +2,6 @@
 
 /**
  *print_numbers - prints numbers from 0 to 9 followed by a newline
- *
  */
 void print_numbers(void)
 {
@@ -15,3 +14,4 @@ void print_numbers(void)
 	}
 	_putchar('\n');
 }
+
