@@ -11,18 +11,10 @@ int _isupper(int c)
 {
 	if (c >= 65 && c <= 90)
 	{
-		_putchar(c);
-		_putchar(':');
-		_putchar(32);
-		_putchar(49);
 		return (1);
 	}
-	else
+	else if (c >= 97 && c <= 122)
 	{
-		_putchar(c);
-		_putchar(':');
-		_putchar(32);
-		_putchar(48);
 		return (0);
 	}
 }
