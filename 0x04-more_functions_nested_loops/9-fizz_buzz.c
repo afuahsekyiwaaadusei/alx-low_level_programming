@@ -2,7 +2,7 @@
 
 /**
  *main - entry point
- *Return: 1 if successfull
+ *Return: 0 if successfull
  */
 
 int main(void)
@@ -24,5 +24,5 @@ int main(void)
 	}
 	printf("Buzz");
 	printf("\n");
-	return (1);
+	return (0);
 }
