@@ -25,6 +25,8 @@ void puts_half(char *str)
 	{
 		int half = (len - 1) / 2;
 
+		half++;
+
 		while (*(str + half) != '\0')
 		{
 			_putchar(*(str + half));
