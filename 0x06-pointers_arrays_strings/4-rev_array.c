@@ -3,7 +3,7 @@
 /**
  *reverse_array - reverses the content of an array of integers.
  *@a: pointer to the array of integers
- @n: length of the array
+ *@n: length of the array
  */
 
 void reverse_array(int *a, int n)
