@@ -23,7 +23,7 @@ void reverse_array(int *a, int n)
 	{
 		int tmp = a[i];
 
-		a[i]= a[x];
+		a[i] = a[x];
 		a[x] = tmp;
 		i++;
 		x--;
