@@ -13,3 +13,9 @@ Write a function that concatenates two strings.
 	src does not need to be null-terminated if it contains n or more bytes
 	Return a pointer to the resulting string dest
 	FYI: The standard library provides a similar function: strncat. Run man strncat to learn more.
+
+Task 2. strncpy
+Write a function that copies a string.
+	Prototype: char *_strncpy(char *dest, char *src, int n);
+	Your function should work exactly like strncpy
+	FYI: The standard library provides a similar function: strncpy. Run man strncpy to learn more.
