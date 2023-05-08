@@ -25,10 +25,10 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
-	if (c == '\0')
-		return (s);
+	/**if (c == '\0')
+		return (s);*/
 
-	result = NULL;
+	
 
-	return (result);
+	return (NULL);
 }
