@@ -24,14 +24,18 @@ unsigned int _strspn(char *s, char *accept)
 			if (s[i] == accept[j])
 			{
 				count++;
+				break;
 			}
 
 			j++;
 		}
 
+		if (s[j] == '\0')
+			return (count);
+
 		i++;
 	}
 
 
-	return (count++);
+	return (count);
 }
