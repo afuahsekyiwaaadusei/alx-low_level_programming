@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  *_odd_num - returns odd numbers.
@@ -24,7 +23,6 @@ int _odd_num(int *o, int n)
 	if (*o % 2 != 0)
 	{
 		n = n - *o;
-		
 		*o = *o + 1;
 	}
 	else
@@ -47,8 +45,6 @@ int _sqrt_recursion(int n)
 {
 	int odd = 0;
 	int *ptr = &odd;
-
 	int result = _odd_num(ptr,n);
-
 	return (result > 0 ? result / 2 : result);
 }
