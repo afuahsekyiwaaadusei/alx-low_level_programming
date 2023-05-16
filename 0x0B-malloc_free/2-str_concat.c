@@ -42,10 +42,15 @@ char *str_concat(char *s1, char *s2)
 	int i = 0;
 	int j = 0;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
 	{
-		str[0] = '\0';
-		return (str);
+		s1[0] = '\0';
+		len1 = 1;
+	}
+	if (s2 == NULL)
+	{
+		s2[0] = '\0';
+		len2 = 1;
 	}
 
 	if (str == NULL)
