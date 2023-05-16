@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 
 /**
  *get_length - returns the length of string.
@@ -41,6 +41,9 @@ char *str_concat(char *s1, char *s2)
 	char *str = malloc((sizeof(char) * len1) + (sizeof(char) * len2) + 1);
 	int i = 0;
 	int j = 0;
+
+	printf("len2 is %d\n", len2);
+	printf("len1 is %d\n", len1);
 
 	if (s1 == NULL)
 	{
