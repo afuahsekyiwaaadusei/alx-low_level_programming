@@ -65,7 +65,6 @@ int main(int argc, char *argv[])
 	{
 		if (check_num(argv[count]))
 		{
-			
 			sum = sum + atoi(argv[count]);
 			count++;
 		}
