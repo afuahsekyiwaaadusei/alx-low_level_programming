@@ -15,7 +15,7 @@ int get_length(char *str)
 	int i = 0;
 	int len = 0;
 
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		len++;
 		i++;
@@ -40,46 +40,41 @@ int get_length(char *str)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int len1, len2;
-	unsigned int i, j;
+	unsigned int i = 0, j = 0;
 	char *new_mem;
 
 
 	if (s1 == NULL)
 	{
 		s1 = '\0';
+		len1 = 1;
 	}
-
-	if (s2 == NULL)
+	else if (s2 == NULL)
 	{
 		s2 = '\0';
+		len2 = 1;
 	}
-	
-	len1 = get_length(s1);
-	len2 = get_length(s2);
-	new_mem = malloc(sizeof *new_mem * (len1 + len2 + 1));
-	i = 0;
-
+	else
+	{
+		len1 = get_length(s1);
+		len2 = get_length(s2);
+	}
+	new_mem = malloc(sizeof(*new_mem) * (len1 + len2 + 1));
 	if (new_mem == NULL)
 		return (NULL);
-
 	while (i < len1)
 	{
 		new_mem[i] = s1[i];
 		i++;
 	}
-
-	j = 0;
-
 	if (n >= len2)
 		n = len2;
-
 	while (j < n)
 	{
 		new_mem[i] = s2[j];
 		i++;
 		j++;
 	}
-
 	new_mem[i] = '\0';
 	return (new_mem);
 }
