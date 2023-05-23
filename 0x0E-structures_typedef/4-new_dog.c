@@ -45,18 +45,4 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (i = 0; i < ol; i++)
 		dog->owner[i] = owner[i];
 	return (dog);
-
-
-	/*struct dog *Dog;
-
-	Dog = malloc(sizeof(struct dog));
-	if (!Dog)
-	{
-		free(Dog);
-		return (NULL);
-	}
-	Dog->name = name;
-	Dog->age = age;
-	Dog->owner = owner;
-	return (Dog);*/
 }
