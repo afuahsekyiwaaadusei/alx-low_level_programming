@@ -11,36 +11,58 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int i = 0, count = 0;
+	int i = 0;
 	const char *ptr = format;
+	char *str;
 
 	va_start(args, format);
-	while (ptr[count] != '\0')
-		count++;
-	while (ptr[i] != '\0')
+	while (ptr[i] != '\0' && ptr[i + 1] != '\0')
 	{
-		if (ptr[i] == 'c' && i < count - 1)
-			printf("%c, ", va_arg(args, int));
-		else if (ptr[i] == 'c' && i == count - 1)
-			printf("%c", va_arg(args, int));
-		else if (ptr[i] == 'i' && i < count - 1)
-			printf("%d, ", va_arg(args, int));
-		else if (ptr[i] == 'i' && i == count - 1)
-			printf("%d", va_arg(args, int));
-		else if (ptr[i] == 'f' && i < count - 1)
-			printf("%f, ", va_arg(args, double));
-		else if (ptr[i] == 'f' && i == count - 1)
-			printf("%f", va_arg(args, double));
-		else if (ptr[i] == 's')
+		switch(ptr[i])
 		{
-			char *str = va_arg(args, char *);
-
-			if (str == NULL)
-				printf("(nil)");
-			else if (i < count - 1)
-				printf("%s, ", str);
-			else if (i == count - 1)
-				printf("%s", str);
+			case 'c' :
+				 printf("%c, ", va_arg(args, int));
+				 break;
+			case 'i' :
+				 printf("%d, ", va_arg(args, int));
+				 break;
+			case 'f' :
+				 printf("%f, ", va_arg(args, double));
+				 break;
+			case 's' :
+				 str = va_arg(args, char *);
+				 if (str == NULL)
+					  printf("(nil)");
+				 else
+					 printf("%s, ", str);
+				 break;
+			default :
+				 break;
+		}
+		i++;
+	}
+	while (ptr[i] != '\0' && ptr[i + 1] == '\0')
+	{
+		switch(ptr[i])
+		{
+			case 'c' :
+				printf("%c", va_arg(args, int));
+				break;
+			case 'i' :
+				printf("%d", va_arg(args, int));
+				break;
+			case 'f' :
+				printf("%f", va_arg(args, double));
+				break;
+			case 's' :
+				str = va_arg(args, char *);
+				if (str == NULL)
+					printf("(nil)");
+				else
+					printf("%s", str);
+				break;
+			default :
+				break;
 		}
 		i++;
 	}
