@@ -10,7 +10,7 @@
  *Return: zero on success
  */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int a, b;
 	int (*arith)(int, int);
@@ -38,5 +38,5 @@ int main(int argc, char* argv[])
 	}
 	printf("%d\n", arith(a, b));
 
-	return (0 );
+	return (0);
 }
