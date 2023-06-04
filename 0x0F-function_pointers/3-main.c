@@ -15,15 +15,15 @@ int main(int argc, char* argv[])
 	int a, b;
 	int (*arith)(int, int);
 
-	if (argc > 4)
+	if (argc < 4 || argc > 4)
 	{
-		printf("Ergc is > 4 Error\n");
+		printf("Error\n");
 		exit(98);
 	}
 
-	if ((argv[3] == 0) && (argv[2] == '/' || argv[2] == '%'))
+	if ((*argv[3] == '0') && (*argv[2] == '/' || *argv[2] == '%'))
 	{
-		printf("division or modulus by zero Error\n");
+		printf("Error\n");
 		exit(100);
 	}
 
@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
 
 	if (!arith)
 	{
-		printf("operator invalid Error\n");
+		printf("Error\n");
 		exit(99);
 	}
 	printf("%d\n", arith(a, b));

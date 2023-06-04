@@ -22,14 +22,14 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 
-	int i;
+	int i = 0;
+	char *def;
 
 	while (i < 6)
 	{
-		op_t operator = ops[i];
-
-		if (operator.op == s)
-			return (operator.f);
+		def = ops[i].op;
+		if (*def == *s)
+			return (ops[i].f);
 		i++;
 	}
 	return (NULL);
