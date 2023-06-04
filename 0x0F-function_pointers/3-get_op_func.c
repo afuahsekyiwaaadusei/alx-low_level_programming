@@ -23,12 +23,10 @@ int (*get_op_func(char *s))(int, int)
 	};
 
 	int i = 0;
-	char *def;
-
+	
 	while (i < 6)
 	{
-		def = ops[i].op;
-		if (*def == *s)
+		if (*(ops[i].op) == *s)
 			return (ops[i].f);
 		i++;
 	}
