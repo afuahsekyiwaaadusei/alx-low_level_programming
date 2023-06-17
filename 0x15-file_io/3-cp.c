@@ -16,7 +16,7 @@ int main(int ac, char **av)
 {
 	int fd1, fd2, c_fd1, c_fd2;
 	ssize_t rd, wr;
-	char *buf = malloc(sizeof(char) * 1024);
+	char buf[1024];
 
 	if (ac < 3 || ac > 3)
 	{
