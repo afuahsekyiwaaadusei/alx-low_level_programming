@@ -36,23 +36,25 @@ int get_length(char *str)
 
 char *str_concat(char *s1, char *s2)
 {
-	int len1 = get_length(s1);
-	int len2 = get_length(s2);
-	char *str = malloc((sizeof(char) * len1) + (sizeof(char) * len2) + 1);
+	int len1;
+	int len2;
+	char *str;
 	int i = 0;
 	int j = 0;
 
-	printf("len2 is %d\n", len2);
-	printf("len1 is %d\n", len1);
-
 	if (s1 == NULL)
 	{
-		s1 = "";
+		printf("before s1 empty");
+		s1 = '\0';
 	}
 	if (s2 == NULL)
 	{
-		s2 = "";
+		s2 = '\0';
 	}
+
+	len1 = get_length(s1);
+	len2 = get_length(s2);
+	str = malloc((sizeof(char) * len1) + (sizeof(char) * len2) + 1);
 
 	if (str == NULL)
 		return (NULL);
@@ -60,11 +62,13 @@ char *str_concat(char *s1, char *s2)
 	while (i < len1)
 	{
 		str[i] = s1[i];
+		printf("len1 is %d and i is %d str[%d] is s1[%d] ", len1, i, i, i);
 		i++;
 	}
 	while (i < (len2 + len1))
 	{
 		str[i] = s2[j];
+		printf("len2+len1 is %d i is %d j is %d str[%d] and s[%d] ", len2+len1, i, j, i, j);
 		j++;
 		i++;
 	}
